@@ -1,6 +1,6 @@
 # Modern CSS Slider
 
-![Modern CSS Slider](https://picsum.photos/id/10/800/200)
+![Modern CSS Slider](cover.png)
 
 ## 📋 Overview
 
@@ -13,7 +13,9 @@ This project is a modern, responsive card slider created with pure CSS. It featu
 - 🔄 Smooth sliding animations
 - 💫 Interactive hover effects
 - 🏷️ Card badges and tags
-- 🖱️ Scroll buttons and markers
+- 🆕 **Latest CSS Carousel Features (Chrome 135+):**
+  - 🔘 Native Scroll Buttons - Browser-provided `<button>` elements
+  - 🔵 Native Scroll Markers - Interactive dots as `<a>` elements
 - ✨ Shine effect on hover
 
 ## 🚀 How to Use
@@ -89,18 +91,29 @@ Cards have several interactive effects:
 
 #### 4. Scroll Controls
 
-The slider has built-in scroll buttons and markers:
+The slider uses the **latest CSS features for carousels released in Chrome 135**:
 
+##### Native Scroll Buttons
 ```css
 .carousel::scroll-button(left),
 .carousel::scroll-button(right) {
   /* Button styles */
+}
+```
+These are actual `<button>` elements that the browser automatically creates. They scroll the carousel content 85% of the visible area when clicked.
+
+##### Native Scroll Markers
+```css
+.carousel {
+  scroll-marker-group: after;
+  /* More marker properties... */
 }
 
 .carousel li::scroll-marker {
   /* Marker styles */
 }
 ```
+These are actual `<a>` elements that the browser automatically creates. They appear as dots below the carousel and scroll to a specific carousel item when clicked.
 
 #### 5. Responsive Design
 
@@ -186,11 +199,9 @@ Edit the transition variable:
 
 ## 📱 Browser Support
 
-This slider works in all modern browsers:
-- Chrome
-- Firefox
-- Safari
-- Edge
+This slider uses cutting-edge CSS features:
+- ✅ Chrome 135+ (full support for all features)
+- ⚠️ Other browsers: Basic functionality works, but the native scroll buttons and markers are only available in Chrome 135+
 
 Some advanced features might not work in older browsers.
 
